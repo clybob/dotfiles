@@ -94,3 +94,7 @@
 	path = dotfiles/.vim/bundle/VimBookmarking
 	url = git://github.com/dterei/VimBookmarking.git
 	ignore = untracked
+[submodule "dotfiles/.vim/bundle/powerline"]
+	path = dotfiles/.vim/bundle/powerline
+	url = git://github.com/Lokaltog/powerline.git
+	ignore = untracked

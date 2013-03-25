@@ -54,6 +54,15 @@ let g:jedi#show_function_definition = "0"
 let g:session_autoload = "yes"
 let g:session_autosave = "yes"
 
+" Enable powerline
+let g:Powerline_symbols = 'fancy'
+let g:Powerline_theme='custom'
+python <<EOF
+import os
+os.environ['XDG_CONFIG_HOME'] = os.path.expanduser('~/.vim')
+EOF
+" set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+
 " Enable pathogen
 call pathogen#infect()
 call pathogen#helptags()
@@ -66,10 +75,6 @@ let NERDTreeDirArrows=1
 
 " Abbreviation for mru
 cab mru Mru
-
-let g:Powerline_symbols = 'fancy'
-let g:Powerline_theme='custom'
-
 
 " Enable built-in matchit plugin
 source $VIMRUNTIME/macros/matchit.vim
