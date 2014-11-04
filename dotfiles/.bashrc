@@ -172,7 +172,6 @@ function check_for_virtual_env {
 
   if [ $? == 0 ]; then
     local ENV_NAME=`basename \`pwd\``
-    echo "$ENV_NAME"
 
     if [ "${VIRTUAL_ENV##*/}" != $ENV_NAME ] && [ -e $WORKON_HOME/$ENV_NAME/bin/activate ]; then
       workon $ENV_NAME && export CD_VIRTUAL_ENV=$ENV_NAME
@@ -183,7 +182,6 @@ function check_for_virtual_env {
 }
 
 function cs {
-    echo "teste"
     builtin cd "$@" && check_for_virtual_env
 }
 
